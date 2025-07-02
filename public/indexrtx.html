@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.7.2-web/css/all.min.css"
+    />
+    <link type="text/css" rel="stylesheet" href="./css/library.css" />
+    <link type="text/css" rel="stylesheet" href="./css/playlist.css" />
+    <link rel="stylesheet" href="./css/artist_profile.css" type="text/css" />
+    <link rel="stylesheet" href="./control_styling.css" type="text/css" />
+    <script type="text/javascript"></script>
+    <title>Audio Player</title>
+  </head>
+  <body onload="setRoader('default')">
+    <!--#############################################################################################################################
+            #################################################   DASHBORD #############################################################-->
+    <div class="outer">
+      <div id="dashboard">
+        <div>
+          <button class="home_navigation">
+            <i class="fa fa-house"></i>Home
+          </button>
+        </div>
+        <div>
+          <button class="library">
+            <i id="fabars" class="fa fa-bars"></i>Library
+          </button>
+        </div>
+        <div>
+          <button><i class="fa fa-search"></i>Search</button>
+        </div>
+
+        <hr class="hr" />
+        <div class="genre">
+          <a href="#">Hip Hop</a>
+          <a href="#">EDM</a>
+          <a href="#">Afro</a>
+          <a href="#">Indie pop</a>
+          <a href="#">Trap/Rap</a>
+          <a href="#">Country</a>
+          <a href="#">Folk & Acoustics</a>
+          <a href="#">New Releases</a>
+          <a href="#">Instrumental</a>
+          <a href="#">Gaming</a>
+          <a href="#">2024 in Music</a>
+        </div>
+        <div class="artwok-nowplaying">
+          <img class="img-artwork" loading="lazy" />
+        </div>
+      </div>
+      <!--###############################################################################################################################
+            ############################################### A view ground that changes according to dashboard selected #################-->
+      <div id="view_ground">
+        <div class="home">
+          <span style="font-size: 26px; font-weight: bold">ZXENON</span>
+          <div class="profile">
+            <img
+              src="\images\track (5).jpg"
+              alt="profile image"
+              class="profile_image"
+            />
+          </div>
+        </div>
+        <div class="writeMe"></div>
+      </div>
+      <div id="baseline">
+        <div class="playing_title">
+          <span class="playing_song_title"> AM I Dreaming </span>
+          <i class="fa-regular fa-heart"></i>
+          <br />
+          <span class="playing_song_artist title_artist_anchor"
+            >Metro Boomin</span
+          >
+        </div>
+        <div class="audio_container">
+          <audio id="music"></audio>
+          <div class="controls">
+            <button class="control suffle">
+              <i class="fa fa-shuffle"></i>
+            </button>
+            <button class="control prev">
+              <i class="fa fa-backward-step"></i>
+            </button>
+            <button class="control btn_play">
+              <i class="fa fa-play"></i>
+            </button>
+            <button class="control next">
+              <i class="fa fa-forward-step"></i>
+            </button>
+            <button class="control repeat"><i class="fa fa-repeat"></i></button>
+          </div>
+          <div class="audio_progress">
+            <span class="elapsed_time"
+              ><span class="elapesd_minutes">0</span>:<span
+                class="elapsed_seconds"
+                >00</span
+              ></span
+            >
+            <div class="progress_bar">
+              <div class="moving_bar"></div>
+            </div>
+            <span class="track_length">0:00</span>
+          </div>
+        </div>
+        <div class="volume_playlist">
+          <i class="fa fa-list-ul"></i>
+          <i class="fa fa-volume-high"></i>
+          <div class="volume_bar"></div>
+        </div>
+      </div>
+    </div>
+    <script async type="text/javascript" src="./audio.mjs" defer></script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+.artist-profile {
+  height: 100%;
+  width: 100%;
+}
+.cover-photo {
+  height: 320px;
+  width: 100%;
+}
+.cover-photo-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 24%;
+}
+.artist-name {
+  position: relative;
+  font-size: 2em;
+  font-weight: bolder;
+  left: 0%;
+  color: white;
+  /* 
+h
+4
+ */
+
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0, 0.5));
+  flex-direction: column;
+  display: flex;
+  padding: 1%;
+  top: -100%;
+  height: calc(100% - 9%);
+}
+.spacer {
+  flex-grow: 0.95;
+}
+.releases {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+p.popular,
+p.latest {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+p.popular {
+  width: 81%;
+}
+.popular-releases {
+  margin-left: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 0.5em;
+  column-gap: 1em;
+  width: 80%;
+  /* max-width: fit-content;
+  min-width: min-content;
+  max-width: max-content; */
+}
+.popular-release-item {
+  /* border: red 1px groove; */
+  box-shadow: 0px 0px 10px 0px rgb(29, 27, 27);
+  display: flex;
+  overflow: hidden;
+  gap: 0.4em;
+  justify-content: flex-start;
+  height: 65px;
+  width: 32%;
+  min-width: 200px;
+}
+.release-title {
+  font-size: 16px;
+}
+.release-year-and-type,
+.album-type-and-year {
+  font-size: 12px;
+  color: rgb(114, 111, 107);
+}
+.release-year-and-type:hover {
+  cursor: pointer;
+}
+.popular-release-cover-photo {
+  height: 60px;
+  width: 60px;
+}
+.latest-release {
+  width: 12%;
+  height: 5%;
+  min-width: 170px;
+}
+.latest-release-cover-photo {
+  box-shadow: 0px 0px 10px 0px rgb(56, 60, 65);
+  border-radius: 15% 0% 15% 0%;
+  width: 90%;
+  height: 90%;
+}
+.latest-release-cover-photo:hover {
+  border-radius: 0% 15% 0% 15%;
+  transform: rotateX(10deg) rotateY(1deg);
+}
+.latest-release-title,
+.album-item-title {
+  font-size: 18px;
+}
+span.latest-year {
+  font-size: 14px;
+}
+.discovery,
+.albums {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  gap: 0.5em;
+}
+.dicovery-item,
+.album-item {
+  box-shadow: 0px 160px 10px 1px rgb(29, 27, 27);
+  width: 160px;
+}
+.dicovery-item-image,
+.album-item-image {
+  border-radius: 2px;
+  width: 150px;
+  height: 150px;
+}

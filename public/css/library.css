@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("./fonts/manrope/static/Manrope-Regular.ttf"), format("truetype");
+  font-weight: bolder;
+}
+* {
+  font-family: Manrope, sans-serif;
+  scrollbar-width: none;
+}
+body {
+  padding: 10px;
+  /* background-color: rgb(29, 27, 27); */
+  /* color: #e6dbdb; */
+}
+.div_navigation_playlist_buttons {
+  margin-top: 70px;
+}
+.div_navigation_playlist_buttons > button {
+  border: none;
+  font-weight: 500;
+  border-radius: 5%;
+  height: 25px;
+  font-size: 12px;
+  margin: 0px 5px 0px 5px;
+  background-color: #474646;
+  color: #e6dbdb;
+}
+button.first3 {
+  color: #474646;
+  background-color: #e6dbdb;
+}
+button.first1 {
+  color: #e6dbdb;
+  background-color: transparent;
+  border: #e6dbdb 1px solid;
+  border-radius: 2px;
+}
+.playlist_info {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.playlist_cover_image {
+  margin-top: 10px;
+}
+.playlist_cover_image > img {
+  height: 120px;
+  width: 120px;
+}
+.playlist_details > section {
+  font-size: 14px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.playlist_details p {
+  color: #636363;
+  font-size: 12px;
+  margin: 0px;
+}
+.playlist_details_title {
+  margin-bottom: 5px;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  font-size: 18px;
+  /* border: 2px red solid; */
+  color: #fefefe;
+}
+thead {
+  padding-bottom: 78px;
+}
+.tr_songs td {
+  height: 18px;
+  padding: 10px 0px 10px 4px;
+  color: #636363;
+  font-size: 13px;
+}
+.tr_songs:hover {
+  /* background-color: rgb(47, 44, 44); */
+  background-color: rgba(240, 119, 6, 0.221);
+  color: #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+th {
+  font-size: 14px;
+  border-bottom: #343232 solid 1px;
+  color: #636363;
+  padding-bottom: 5px;
+  margin-right: 0px;
+}
+.table_numbering {
+  width: 30px;
+  text-align: left;
+}
+.table_songs {
+  width: 480px;
+  text-align: left;
+}
+.table_artist {
+  width: 300px;
+  text-align: left;
+}
+.table_album {
+  width: 370px;
+  text-align: left;
+}
+.table_duration {
+  width: 70px;
+  text-align: left;
+}
+
+td img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 5%;
+  margin: 0px 10px 0px 5px;
+}
+
+.library_artist {
+  display: flex;
+  align-items: center;
+  width: 15%;
+  height: 15%;
+  max-height: 15%;
+  max-width: 15%;
+  min-width: min-content;
+  min-height: min(100px, 20%);
+  text-align: center;
+}
+.library_artist_profile {
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+}
+.library_album_profile {
+  object-fit: cover;
+  border-radius: 5%;
+  height: 150px;
+  width: 150px;
+}
+div.dtr_songs {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  row-gap: 1em;
+  column-gap: 5%;
+  align-items: center;
+  height: 45px;
+}
+div.dtr_songs:hover {
+  background-color: rgba(240, 119, 6, 0.221);
+}
+.track_duration {
+  width: 9%;
+  text-align: right;
+  padding-right: 3%;
+}
+.track_artist {
+  width: 50%;
+}
+.track_title {
+  width: 25%;
+}
+div.no {
+  padding-left: 5px;
+}
+.playlist_info_padding {
+  padding-top: 14px;
+}
+.playlist_cover_image_padding {
+  padding-top: 4px;
+}

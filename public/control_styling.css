@@ -1,0 +1,44 @@
+.image-wrapper {
+  position: relative;
+  height: 160px;
+  width: 160px;
+  margin-bottom: 1px;
+}
+.play_track {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  transition: opacity 0.3s ease, transform 0.3s;
+  visibility: hidden;
+}
+.feed_music:hover .play_track,
+.dicovery-item:hover .play_track,
+.popular-release-item:hover .play_track,
+.recent:hover .play_track {
+  visibility: visible;
+  transform: scale(1.1);
+}
+.play_track:active {
+  opacity: 0.5;
+}
+.image-wrapper-recent {
+  position: relative;
+  /* width: 160px; */
+  margin-bottom: 1px;
+  position: relative;
+  height: 107px;
+  margin-bottom: 1px;
+  width: 107px;
+}
+.popular-release-item {
+  position: relative;
+}
+
+@media (max-width: 1000px) {
+  .play_track {
+    visibility: visible;
+  }
+}
+.new_music {
+  display: none;
+}

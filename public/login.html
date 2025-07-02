@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.min.css" />
+    <title>login</title>
+    <style>
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: url("images/phone-with-music-icon-headphones-blurred-background-music-listening-concept-copy-space.jpg")
+          center/cover no-repeat;
+        filter: blur(0.5px); /* Adjust blur as needed */
+        opacity: 0.97;
+      }
+      body {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background: none;
+        color: #f3fbf9;
+        padding: 20px;
+        height: 100vh;
+      }
+      form {
+        background-color: rgba(33, 33, 36, 0.7);
+        padding: 50px 30px 30px 30px;
+        border: 1px solid #777da9;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        width: 350px;
+        max-width: 90vw;
+      }
+      #loginForm {
+        display: block;
+      }
+      #registerForm {
+        display: none;
+      }
+      .input-wrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 18px;
+      }
+      .input-wrapper i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #aaa;
+        pointer-events: none;
+        font-size: 1em;
+      }
+      .input-wrapper input {
+        width: 100%;
+        padding: 10px 10px 10px 35px;
+        background-color: rgb(42, 42, 49);
+        border: none;
+        border-radius: 4px;
+        color: #f3fbf9;
+        margin-bottom: 0;
+        box-sizing: border-box;
+      }
+      button {
+        padding: 10px 15px;
+        font-size: 14px;
+        width: 100%;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #8a2be2;
+        font-weight: bold;
+        box-shadow: 0 0 5px #8a2be2;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #6c1bb1;
+        box-shadow: 0 0 20px #8a2be2;
+        transform: scale(1.03);
+      }
+      a {
+        color: #d0beae;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      p {
+        margin-top: 18px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 600px) {
+        form {
+          width: 95vw;
+          padding: 20px;
+        }
+      }
+    </style>
+    <script>
+      // Simple toggle for demonstration (optional)
+      function showRegister() {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("registerForm").style.display = "block";
+      }
+      function showLogin() {
+        document.getElementById("loginForm").style.display = "block";
+        document.getElementById("registerForm").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <form id="loginForm" action="none">
+      <h2>Login</h2>
+      <div class="input-wrapper">
+        <i class="fas fa-user"></i>
+        <input
+          type="text"
+          id="login-username"
+          name="username"
+          placeholder="username"
+          required
+        />
+      </div>
+      <div class="input-wrapper">
+        <i class="fas fa-lock"></i>
+        <input
+          type="password"
+          id="login-password"
+          name="password"
+          placeholder="password"
+          required
+        />
+      </div>
+      <button type="submit">Login</button>
+      <p>
+        Don't have an account?
+        <a href="#" onclick="showRegister();return false;">Register here</a>
+      </p>
+    </form>
+    <form id="registerForm">
+      <h2>Register</h2>
+      <div class="input-wrapper">
+        <i class="fas fa-user"></i>
+        <input
+          type="text"
+          id="register-username"
+          name="username"
+          placeholder="username"
+          required
+        />
+      </div>
+      <div class="input-wrapper">
+        <i class="fas fa-envelope"></i>
+        <input
+          type="email"
+          id="register-email"
+          name="email"
+          placeholder="email"
+          required
+        />
+      </div>
+      <div class="input-wrapper">
+        <i class="fas fa-lock"></i>
+        <input
+          type="password"
+          id="register-password"
+          name="password"
+          placeholder="password"
+          required
+        />
+      </div>
+      <div class="input-wrapper">
+        <i class="fas fa-lock"></i>
+        <input
+          type="password"
+          id="register-confirm-password"
+          name="confirmPassword"
+          placeholder="confirm password"
+          required
+        />
+      </div>
+      <button type="submit">Register</button>
+      <p>
+        Already have an account?
+        <a href="#" onclick="showLogin();return false;">Login here</a>
+      </p>
+    </form>
+    <script type="module" src="./auth.mjs"></script>
+  </body>
+</html>

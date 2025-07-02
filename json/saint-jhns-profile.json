@@ -1,0 +1,120 @@
+[
+  [
+    {
+      "artist": "Saint Jhns",
+      "coverphoto": "./images/saint-jhn-scaled-7.jpg"
+    }
+  ],
+  [
+    {
+      "title": "Glitching",
+      "year": 2025,
+      "album": "FESTIVAL SEASON",
+      "location": "./images/artwork/glitching.jpg"
+    },
+    {
+      "title": "High School Reunion (feat. Lil Uzi Vert)",
+      "year": 2018,
+      "album": "While the World Was Burning",
+      "location": "./images/artwork/high_school.PNG"
+    },
+    {
+      "title": "3 Below",
+      "year": 2018,
+      "album": "Collection One",
+      "location": "./images/artwork/metro_boomin.PNG"
+    },
+    {
+      "title": "Reflex",
+      "year": 2018,
+      "album": "Collection One",
+      "location": "./images/artwork/dum_dumb_dumber.PNG"
+    },
+    {
+      "title": "Switching Sides",
+      "year": 2020,
+      "album": "While the World Was Burning",
+      "location": "./images/artwork/30_for_30.jpg"
+    },
+    {
+      "title": "Sucks To Be You",
+      "year": 2020,
+      "album": "While the World Was Burning",
+      "location": "./images/artwork/call_you_bacck.jpg"
+    },
+    {
+      "title": "Trap [ft. Lil Baby]",
+      "year": 2019,
+      "album": "Ghetto Lenny Love Songs",
+      "location": "./images/artwork/for_certain.jpg"
+    },
+    {
+      "title": "94 Bentley",
+      "year": 2019,
+      "album": "Ghetto Lenny Love Songs",
+      "location": "./images/artwork/full_of_people.jpg"
+    },
+    {
+      "title": "Smile",
+      "year": 2025,
+      "album": "Single",
+      "location": "./images/artwork/Morgan_Wallen_-_Smile.png"
+    }
+  ],
+  [
+    {
+      "title": "$iRi",
+      "year": 2025,
+      "album": "$lime Bussiness",
+      "location": "./images/artwork/siri.jpg"
+    }
+  ],
+  [
+    {
+      "title": "Touchdown",
+      "year": 2025,
+      "album": "Single",
+      "location": "./images/artwork/touchdown.jpeg"
+    },
+    {
+      "title": "What's that",
+      "year": 2024,
+      "album": "Not Now, I'm Busy",
+      "location": "./images/artwork/whats_that.PNG"
+    },
+    {
+      "title": "Honeymoon",
+      "year": 2024,
+      "album": "Love Sick",
+      "location": "./images/artwork/love_sick.PNG"
+    },
+    {
+      "title": "Roomful of People (feat. Jake Scott)",
+      "year": 2025,
+      "album": "Single",
+      "location": "./images/artwork/full_of_people.jpg"
+    }
+  ],
+  [
+    {
+      "year": 2025,
+      "album": "FESTIVAL SEASON",
+      "location": "./images/artwork/glitching.jpg"
+    },
+    {
+      "year": 2019,
+      "album": "Ghetto Lenny Love Songs",
+      "location": "./images/artwork/full_of_people.jpg"
+    },
+    {
+      "year": 2020,
+      "album": "While the World Was Burning",
+      "location": "./images/artwork/30_for_30.jpg"
+    },
+    {
+      "year": 2018,
+      "album": "Collection One",
+      "location": "./images/artwork/metro_boomin.PNG"
+    }
+  ]
+]

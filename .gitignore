@@ -1,0 +1,8 @@
+node_modules
+public/image
+public/images
+public/music
+public/Music1
+.env
+.prettierrc
+.vscode
