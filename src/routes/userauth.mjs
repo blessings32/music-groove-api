@@ -17,11 +17,12 @@ router.post("/api/auth/register", async (req, res) => {
   let { username, email, password, confirmPassword } = req.body;
 
   if (!username || !email || !password || !confirmPassword) {
-    return res
-      .status(400)
-      .send(
-        JSON.stringify({ status: "error", message: "All fields are required." })
-      );
+    return res.status(400).send(
+      JSON.stringify({
+        status: "error",
+        message: "All fields are required.",
+      }),
+    );
   } else {
     if (
       typeof username != "string" ||
@@ -32,7 +33,7 @@ router.post("/api/auth/register", async (req, res) => {
       res
         .status(400)
         .send(
-          JSON.stringify({ status: "error", message: "incorrect data type" })
+          JSON.stringify({ status: "error", message: "incorrect data type" }),
         );
       return;
     }
@@ -43,28 +44,28 @@ router.post("/api/auth/register", async (req, res) => {
     ]);
     let usernameFromdb = await query(
       `SELECT username FROM users WHERE username = ?`,
-      [username]
+      [username],
     );
     const hashedPassword = await bcrypt.hash(password, 10);
     if (password !== confirmPassword) {
-      return res.status(400).send(
+      return res.status(409).send(
         JSON.stringify({
           status: "error",
           message: "Passwords do not match.",
-        })
+        }),
       );
     } else if (emailFromdb.length > 0) {
       return res
-        .status(400)
+        .status(409)
         .send(
-          JSON.stringify({ status: "error", message: "Email already exists." })
+          JSON.stringify({ status: "error", message: "Email already exists." }),
         );
     } else if (usernameFromdb.length > 0) {
-      return res.status(400).send(
+      return res.status(409).send(
         JSON.stringify({
           status: "error",
           message: "Username already exists.",
-        })
+        }),
       );
     } else {
       query(`INSERT INTO users (username, email, password) VALUES (?, ?, ?)`, [
@@ -99,21 +100,21 @@ router.post("/api/auth/login", async (req, res) => {
 
     if (userFromDb.length === 0) {
       // Here you would typically check the credentials against the database
-      return res.status(200).send(
+      return res.status(401).send(
         JSON.stringify({
           status: "error",
           message: "Invalid username or password.",
-        })
+        }),
       );
     }
     const passwordfromDb = userFromDb[0].password;
     const isPasswordValid = bcrypt.compareSync(password, passwordfromDb);
     if (!isPasswordValid) {
-      return res.status(200).send(
+      return res.status(401).send(
         JSON.stringify({
           status: "error",
           message: "Invalid username or password.",
-        })
+        }),
       );
     } else {
       console.log("user logged in successfully");
@@ -136,7 +137,7 @@ router.post("/api/auth/login", async (req, res) => {
       res
         .status(200)
         .send(
-          JSON.stringify({ status: "success", message: "Login successful." })
+          JSON.stringify({ status: "success", message: "Login successful." }),
         );
       return;
     }

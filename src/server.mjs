@@ -1,7 +1,7 @@
 import appJS from "./app.mjs";
 import express from "express";
 import setAppLocals from "../config/locals.mjs";
-import errorHandler from "./middleware/errohandler.mjs";
+import errorHandler from "./controllers/errohandler.mjs";
 import cookieParser from "cookie-parser";
 import { fileURLToPath } from "url";
 import { dirname } from "path";

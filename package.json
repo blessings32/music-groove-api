@@ -1,10 +1,10 @@
 {
   "name": "music-groove",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "./src/server.mjs",
   "type": "module",
   "scripts": {
-    "test": "nodemon main.mjs"
+    "test": "nodemon ./src/server.mjs"
   },
   "author": "",
   "license": "ISC",
