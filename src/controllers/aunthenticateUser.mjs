@@ -10,7 +10,6 @@ const __dirname = dirname(__filename);
 function authentication(req, res, next) {
   let token = req.signedCookies.token;
   if (!token) {
-    console.log("no token found, redirecting to login");
     return res.status(401).json({
       code: "AUTH_REQUIRED",
       message: "No token provided",

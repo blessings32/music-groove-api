@@ -3,6 +3,7 @@ import { join } from "path";
 //import buttonPressRouter from "./routes/buttonPressRouter.mjs";
 //import playlistRouter from "./routes/playlistRouter.mjs";
 //import libraryRouter from "./routes/libraryRouter.mjs";
+import playlist from "./routes/playlist.mjs";
 import artists from "./routes/artists.mjs";
 import suggestTracksRouter from "./routes/suggestTracks.mjs";
 import setAppLocals from "../config/locals.mjs";
@@ -24,6 +25,7 @@ router.get("/", (req, res) => {
 router.use(userAuth);
 router.use(aunthenticateUser);
 router.use(artists);
+router.use(playlist);
 // router.get("/home", (req, res) => {
 //   console.log("loading home page");
 //   res.sendFile(join(__dirname, "../public/indexrtx.html"));
