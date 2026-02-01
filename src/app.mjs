@@ -9,6 +9,7 @@ import artists from "./routes/artists.mjs";
 import suggestTracksRouter from "./routes/suggestTracks.mjs";
 import setAppLocals from "../config/locals.mjs";
 import userAuth from "./routes/userauth.mjs";
+import tracks from "./routes/tracks.mjs";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import aunthenticateUser from "./controllers/aunthenticateUser.mjs";
@@ -34,5 +35,6 @@ router.use(playlist);
 router.use(library);
 //router.use(buttonPressRouter);
 router.use(suggestTracksRouter);
+router.use(tracks);
 
 export default router;
