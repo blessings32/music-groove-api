@@ -3,6 +3,7 @@ import { join } from "path";
 //import buttonPressRouter from "./routes/buttonPressRouter.mjs";
 //import playlistRouter from "./routes/playlistRouter.mjs";
 //import libraryRouter from "./routes/libraryRouter.mjs";
+import library from "./routes/library.mjs";
 import playlist from "./routes/playlist.mjs";
 import artists from "./routes/artists.mjs";
 import suggestTracksRouter from "./routes/suggestTracks.mjs";
@@ -30,8 +31,7 @@ router.use(playlist);
 //   console.log("loading home page");
 //   res.sendFile(join(__dirname, "../public/indexrtx.html"));
 // });
-//router.use(libraryRouter);
-//router.use(playlistRouter);
+router.use(library);
 //router.use(buttonPressRouter);
 router.use(suggestTracksRouter);
 
